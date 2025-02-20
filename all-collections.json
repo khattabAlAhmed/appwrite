@@ -1,0 +1,2032 @@
+{
+  "comments": {
+    "id": "678ab93d00318ef792f3",
+    "name": "comments",
+    "attributes": [
+      {
+        "key": "postId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-17T20:07:28.946+00:00",
+        "$updatedAt": "2025-01-17T20:07:29.127+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "userId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-17T20:08:36.082+00:00",
+        "$updatedAt": "2025-01-17T20:08:36.289+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "content",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T20:09:31.065+00:00",
+        "$updatedAt": "2025-01-17T20:09:31.369+00:00",
+        "size": 2200,
+        "default": null
+      },
+      {
+        "key": "likedBy",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-17T20:16:20.155+00:00",
+        "$updatedAt": "2025-01-17T20:16:20.299+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "likes",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T20:16:29.282+00:00",
+        "$updatedAt": "2025-01-17T20:16:29.413+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      }
+    ],
+    "indexes": []
+  },
+  "messages": {
+    "id": "67860034003b6d82a705",
+    "name": "messages",
+    "attributes": [
+      {
+        "key": "sessionId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T06:12:27.004+00:00",
+        "$updatedAt": "2025-01-14T06:12:35.052+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "senderId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T06:12:46.296+00:00",
+        "$updatedAt": "2025-01-14T06:12:46.463+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "content",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T06:12:56.887+00:00",
+        "$updatedAt": "2025-01-14T06:12:57.053+00:00",
+        "size": 2200,
+        "default": null
+      },
+      {
+        "key": "type",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T06:13:25.321+00:00",
+        "$updatedAt": "2025-01-14T06:13:25.482+00:00",
+        "elements": [
+          "text",
+          "image",
+          "voice"
+        ],
+        "format": "enum",
+        "default": null
+      },
+      {
+        "key": "createdAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T06:13:42.082+00:00",
+        "$updatedAt": "2025-01-14T06:13:42.217+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T19:59:54.882+00:00",
+        "$updatedAt": "2025-01-17T20:01:55.728+00:00",
+        "elements": [
+          "delevered",
+          "read",
+          "sent"
+        ],
+        "format": "enum",
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "session_time",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "senderId",
+          "createdAt"
+        ],
+        "orders": [
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-14T06:14:12.086+00:00",
+        "$updatedAt": "2025-01-14T06:14:12.466+00:00"
+      }
+    ]
+  },
+  "posts": {
+    "id": "6785dda9002f5899ea61",
+    "name": "posts",
+    "attributes": [
+      {
+        "key": "content",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:45:23.154+00:00",
+        "$updatedAt": "2025-01-14T03:45:23.272+00:00",
+        "size": 1024,
+        "default": null
+      },
+      {
+        "key": "category",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:45:34.179+00:00",
+        "$updatedAt": "2025-01-14T03:45:34.334+00:00",
+        "size": 100,
+        "default": null
+      },
+      {
+        "key": "imageUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:45:43.610+00:00",
+        "$updatedAt": "2025-01-14T03:45:43.786+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "imageId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:45:57.203+00:00",
+        "$updatedAt": "2025-01-14T03:45:57.384+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "tags",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-14T03:46:09.862+00:00",
+        "$updatedAt": "2025-01-14T03:46:10.020+00:00",
+        "size": 100,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:50:00.430+00:00",
+        "$updatedAt": "2025-01-14T04:30:28.553+00:00",
+        "elements": [
+          "pending",
+          "approved",
+          "denied"
+        ],
+        "format": "enum",
+        "default": "pending"
+      },
+      {
+        "key": "likes",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:51:01.715+00:00",
+        "$updatedAt": "2025-01-14T03:51:01.866+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      },
+      {
+        "key": "views",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:51:41.478+00:00",
+        "$updatedAt": "2025-01-14T03:51:41.639+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      },
+      {
+        "key": "authorId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:51:59.226+00:00",
+        "$updatedAt": "2025-01-14T03:51:59.405+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "authorName",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T03:52:12.430+00:00",
+        "$updatedAt": "2025-01-14T03:52:12.601+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "createdAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-14T03:54:11.423+00:00",
+        "$updatedAt": "2025-01-14T03:54:11.632+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "updatedAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-14T03:54:24.077+00:00",
+        "$updatedAt": "2025-01-14T03:54:24.290+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "denyReason",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T04:31:24.229+00:00",
+        "$updatedAt": "2025-01-14T04:34:24.038+00:00",
+        "size": 1024,
+        "default": null
+      },
+      {
+        "key": "likedBy",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-17T19:50:47.276+00:00",
+        "$updatedAt": "2025-01-17T19:50:47.479+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "comments",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-17T19:51:11.135+00:00",
+        "$updatedAt": "2025-01-17T19:51:11.292+00:00",
+        "size": 30,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "status_created",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "status",
+          "createdAt"
+        ],
+        "orders": [
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-14T03:55:01.348+00:00",
+        "$updatedAt": "2025-01-14T03:55:01.548+00:00"
+      },
+      {
+        "key": "author_created",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "authorId",
+          "createdAt"
+        ],
+        "orders": [
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-14T03:55:30.734+00:00",
+        "$updatedAt": "2025-01-14T03:55:30.961+00:00"
+      },
+      {
+        "key": "category_created",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "category",
+          "createdAt"
+        ],
+        "orders": [
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-14T03:55:56.248+00:00",
+        "$updatedAt": "2025-01-14T03:55:56.411+00:00"
+      }
+    ]
+  },
+  "suggestions": {
+    "id": "67844d74003a230a5484",
+    "name": "suggestions",
+    "attributes": [
+      {
+        "key": "title",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:17:24.198+00:00",
+        "$updatedAt": "2025-01-12T23:17:24.400+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:17:37.149+00:00",
+        "$updatedAt": "2025-01-12T23:17:37.307+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "submitter",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:17:46.623+00:00",
+        "$updatedAt": "2025-01-12T23:17:46.811+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "category",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:19:28.882+00:00",
+        "$updatedAt": "2025-01-12T23:19:29.047+00:00",
+        "elements": [
+          "new_feature",
+          "improvement",
+          "bug_fix"
+        ],
+        "format": "enum",
+        "default": "new_feature"
+      },
+      {
+        "key": "priority",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:20:10.602+00:00",
+        "$updatedAt": "2025-01-12T23:20:10.770+00:00",
+        "elements": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "format": "enum",
+        "default": "medium"
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:20:43.576+00:00",
+        "$updatedAt": "2025-01-12T23:20:43.825+00:00",
+        "elements": [
+          "pending",
+          "approved",
+          "rejected",
+          "completed"
+        ],
+        "format": "enum",
+        "default": "pending"
+      },
+      {
+        "key": "date",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T23:20:58.194+00:00",
+        "$updatedAt": "2025-01-12T23:20:58.407+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "votes",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T23:21:12.749+00:00",
+        "$updatedAt": "2025-01-12T23:21:12.896+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "votes_sort",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "votes"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T23:21:51.674+00:00",
+        "$updatedAt": "2025-01-12T23:21:51.947+00:00"
+      },
+      {
+        "key": "date_sort",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "date"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T23:22:10.191+00:00",
+        "$updatedAt": "2025-01-12T23:22:10.379+00:00"
+      },
+      {
+        "key": "status_category",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "status",
+          "category"
+        ],
+        "orders": [
+          "ASC",
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T23:22:39.532+00:00",
+        "$updatedAt": "2025-01-12T23:22:39.698+00:00"
+      }
+    ]
+  },
+  "documents": {
+    "id": "67844430000f10c04330",
+    "name": "documents",
+    "attributes": [
+      {
+        "key": "title",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:37:47.508+00:00",
+        "$updatedAt": "2025-01-12T22:37:47.614+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:37:59.554+00:00",
+        "$updatedAt": "2025-01-12T22:37:59.687+00:00",
+        "size": 255,
+        "default": ""
+      },
+      {
+        "key": "category",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:38:19.690+00:00",
+        "$updatedAt": "2025-01-12T22:38:19.906+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "fileUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:38:34.287+00:00",
+        "$updatedAt": "2025-01-12T22:38:34.457+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "fileId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:38:54.966+00:00",
+        "$updatedAt": "2025-01-12T22:38:55.106+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "fileName",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:39:16.044+00:00",
+        "$updatedAt": "2025-01-12T22:39:16.345+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "size",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:39:27.701+00:00",
+        "$updatedAt": "2025-01-12T22:39:27.868+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "date",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T22:39:49.331+00:00",
+        "$updatedAt": "2025-01-12T22:39:49.456+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "downloads",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T20:18:12.335+00:00",
+        "$updatedAt": "2025-01-17T20:18:13.432+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      },
+      {
+        "key": "reads",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T20:18:46.421+00:00",
+        "$updatedAt": "2025-01-17T20:18:47.204+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      }
+    ],
+    "indexes": [
+      {
+        "key": "title_search",
+        "type": "fulltext",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "title"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T22:43:36.723+00:00",
+        "$updatedAt": "2025-01-12T22:43:37.362+00:00"
+      },
+      {
+        "key": "category_search",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "category"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T22:44:24.548+00:00",
+        "$updatedAt": "2025-01-12T22:44:24.798+00:00"
+      },
+      {
+        "key": "date_sort",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "date"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T22:44:42.344+00:00",
+        "$updatedAt": "2025-01-12T22:44:42.504+00:00"
+      }
+    ]
+  },
+  "notifications": {
+    "id": "67843d6f0032be5d92ce",
+    "name": "notifications",
+    "attributes": [
+      {
+        "key": "title",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:09:11.615+00:00",
+        "$updatedAt": "2025-01-12T22:09:11.809+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "body",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:09:25.828+00:00",
+        "$updatedAt": "2025-01-12T22:09:25.950+00:00",
+        "size": 512,
+        "default": null
+      },
+      {
+        "key": "type",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T22:09:58.093+00:00",
+        "$updatedAt": "2025-01-12T22:09:58.347+00:00",
+        "elements": [
+          "all",
+          "users",
+          "admins",
+          "specialists",
+          "new_users",
+          "session_users"
+        ],
+        "format": "enum",
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T22:10:22.136+00:00",
+        "$updatedAt": "2025-01-12T22:10:22.278+00:00",
+        "elements": [
+          "pending",
+          "sent",
+          "failed"
+        ],
+        "format": "enum",
+        "default": null
+      },
+      {
+        "key": "targetGroups",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-12T22:10:59.070+00:00",
+        "$updatedAt": "2025-01-12T22:10:59.334+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "sendDate",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T22:11:14.730+00:00",
+        "$updatedAt": "2025-01-12T22:11:14.908+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "scheduledDate",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T22:11:26.051+00:00",
+        "$updatedAt": "2025-01-12T22:11:26.215+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "metadata",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:11:52.558+00:00",
+        "$updatedAt": "2025-01-12T22:11:52.721+00:00",
+        "size": 255,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "type_status",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "type",
+          "status"
+        ],
+        "orders": [
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T22:12:51.646+00:00",
+        "$updatedAt": "2025-01-12T22:12:51.930+00:00"
+      },
+      {
+        "key": "date_sort",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "sendDate"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T22:19:27.478+00:00",
+        "$updatedAt": "2025-01-12T22:19:27.688+00:00"
+      }
+    ]
+  },
+  "success_stories": {
+    "id": "67843461001e89b9c34c",
+    "name": "success_stories",
+    "attributes": [
+      {
+        "key": "title",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:30:18.545+00:00",
+        "$updatedAt": "2025-01-12T21:30:18.708+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:30:27.449+00:00",
+        "$updatedAt": "2025-01-12T21:30:27.584+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "content",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:30:35.795+00:00",
+        "$updatedAt": "2025-01-12T21:30:35.925+00:00",
+        "size": 65535,
+        "default": null
+      },
+      {
+        "key": "category",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:30:51.076+00:00",
+        "$updatedAt": "2025-01-12T21:30:51.266+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "imageUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:30:59.734+00:00",
+        "$updatedAt": "2025-01-12T21:30:59.879+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "fileId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:31:10.107+00:00",
+        "$updatedAt": "2025-01-12T21:31:10.269+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "date",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T21:31:22.699+00:00",
+        "$updatedAt": "2025-01-12T21:31:22.867+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:53:57.514+00:00",
+        "$updatedAt": "2025-01-17T20:05:11.882+00:00",
+        "elements": [
+          "approved",
+          "admin",
+          "pending",
+          "refused"
+        ],
+        "format": "enum",
+        "default": null
+      },
+      {
+        "key": "userId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:00:13.220+00:00",
+        "$updatedAt": "2025-01-12T22:00:13.978+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "denyReason",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T20:05:40.397+00:00",
+        "$updatedAt": "2025-01-17T20:05:41.162+00:00",
+        "size": 512,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "title_search",
+        "type": "fulltext",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "title"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T21:31:43.044+00:00",
+        "$updatedAt": "2025-01-12T21:31:43.719+00:00"
+      },
+      {
+        "key": "category_search",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "category"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T21:32:04.319+00:00",
+        "$updatedAt": "2025-01-12T21:32:04.514+00:00"
+      },
+      {
+        "key": "date_sort",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "date"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T21:32:40.723+00:00",
+        "$updatedAt": "2025-01-12T21:32:40.921+00:00"
+      }
+    ]
+  },
+  "success_stories_categories": {
+    "id": "67842ed200163c385a9c",
+    "name": "success_stories_categories",
+    "attributes": [
+      {
+        "key": "name",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:16:04.966+00:00",
+        "$updatedAt": "2025-01-12T21:16:05.194+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:16:20.667+00:00",
+        "$updatedAt": "2025-01-12T21:16:20.889+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "date",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:16:30.650+00:00",
+        "$updatedAt": "2025-01-12T21:16:30.785+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "storiesCount",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T21:16:38.319+00:00",
+        "$updatedAt": "2025-01-12T21:16:38.430+00:00",
+        "min": -9223372036854776000,
+        "max": 9223372036854776000,
+        "default": null
+      }
+    ],
+    "indexes": []
+  },
+  "images": {
+    "id": "6783eca20033ef82fb43",
+    "name": "images",
+    "attributes": [
+      {
+        "key": "title",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:24:13.362+00:00",
+        "$updatedAt": "2025-01-12T16:24:13.524+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:24:22.598+00:00",
+        "$updatedAt": "2025-01-12T16:24:22.749+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "imageUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:24:35.602+00:00",
+        "$updatedAt": "2025-01-12T16:24:35.744+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "uploadDate",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:24:44.239+00:00",
+        "$updatedAt": "2025-01-12T16:24:44.361+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "size",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:24:57.193+00:00",
+        "$updatedAt": "2025-01-12T16:24:57.326+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "fileId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:25:07.208+00:00",
+        "$updatedAt": "2025-01-12T16:25:07.357+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "views",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T19:53:42.550+00:00",
+        "$updatedAt": "2025-01-17T19:53:43.329+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      },
+      {
+        "key": "likedBy",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-17T19:54:09.906+00:00",
+        "$updatedAt": "2025-01-17T19:54:10.578+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "likes",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T19:54:32.476+00:00",
+        "$updatedAt": "2025-01-17T19:54:33.146+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      },
+      {
+        "key": "saves",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T19:55:29.452+00:00",
+        "$updatedAt": "2025-01-17T19:55:30.166+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": 0
+      }
+    ],
+    "indexes": [
+      {
+        "key": "title",
+        "type": "fulltext",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "title"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T16:25:48.645+00:00",
+        "$updatedAt": "2025-01-12T16:25:49.436+00:00"
+      },
+      {
+        "key": "uploadDate",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "uploadDate"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T16:26:11.180+00:00",
+        "$updatedAt": "2025-01-12T16:26:11.427+00:00"
+      }
+    ]
+  },
+  "document_categories": {
+    "id": "6783e13b000be68a6e0e",
+    "name": "document_categories",
+    "attributes": [
+      {
+        "key": "name",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:40:13.071+00:00",
+        "$updatedAt": "2025-01-12T22:40:13.208+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:40:20.669+00:00",
+        "$updatedAt": "2025-01-12T22:40:20.768+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "date",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-12T22:40:40.831+00:00",
+        "$updatedAt": "2025-01-12T22:40:40.959+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "documentsCount",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T22:40:53.209+00:00",
+        "$updatedAt": "2025-01-12T22:40:53.327+00:00",
+        "min": 0,
+        "max": 9223372036854776000,
+        "default": null
+      },
+      {
+        "key": "documents",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-17T19:52:19.810+00:00",
+        "$updatedAt": "2025-01-17T19:52:20.013+00:00",
+        "size": 30,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "name_search",
+        "type": "unique",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "name"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T22:46:38.333+00:00",
+        "$updatedAt": "2025-01-12T22:46:38.510+00:00"
+      },
+      {
+        "key": "date_sort",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "date"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T22:47:06.481+00:00",
+        "$updatedAt": "2025-01-12T22:47:06.698+00:00"
+      }
+    ]
+  },
+  "data": {
+    "id": "6783d81b001f2018dc34",
+    "name": "data",
+    "attributes": [
+      {
+        "key": "key",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T14:58:07.417+00:00",
+        "$updatedAt": "2025-01-12T14:58:07.638+00:00",
+        "size": 50,
+        "default": null
+      },
+      {
+        "key": "value",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T14:58:29.481+00:00",
+        "$updatedAt": "2025-01-12T14:58:29.658+00:00",
+        "size": 500,
+        "default": null
+      }
+    ],
+    "indexes": []
+  },
+  "videos": {
+    "id": "67834570003d2da0d498",
+    "name": "videos",
+    "attributes": [
+      {
+        "key": "title",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:08:29.428+00:00",
+        "$updatedAt": "2025-01-12T16:08:29.642+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:08:50.933+00:00",
+        "$updatedAt": "2025-01-12T16:08:51.117+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "duration",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:09:18.764+00:00",
+        "$updatedAt": "2025-01-12T16:09:18.981+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "views",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:09:27.337+00:00",
+        "$updatedAt": "2025-01-12T16:09:27.484+00:00",
+        "min": -9223372036854776000,
+        "max": 9223372036854776000,
+        "default": null
+      },
+      {
+        "key": "date",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:09:55.173+00:00",
+        "$updatedAt": "2025-01-12T16:09:55.346+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "category",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:10:15.484+00:00",
+        "$updatedAt": "2025-01-12T16:10:15.682+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "thumbnailUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:10:28.737+00:00",
+        "$updatedAt": "2025-01-12T16:10:28.891+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "videoUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:10:39.113+00:00",
+        "$updatedAt": "2025-01-12T16:10:39.272+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "fileId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T16:10:47.157+00:00",
+        "$updatedAt": "2025-01-12T16:10:47.327+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "isYoutube",
+        "type": "boolean",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-12T17:14:53.919+00:00",
+        "$updatedAt": "2025-01-12T17:14:54.806+00:00",
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "title",
+        "type": "fulltext",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "title"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T16:11:13.364+00:00",
+        "$updatedAt": "2025-01-12T16:11:14.145+00:00"
+      },
+      {
+        "key": "category",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "category"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-12T16:11:46.350+00:00",
+        "$updatedAt": "2025-01-12T16:11:46.588+00:00"
+      },
+      {
+        "key": "date",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "date"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T16:12:12.586+00:00",
+        "$updatedAt": "2025-01-12T16:12:12.947+00:00"
+      },
+      {
+        "key": "views",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "views"
+        ],
+        "orders": [
+          "DESC"
+        ],
+        "$createdAt": "2025-01-12T16:12:30.482+00:00",
+        "$updatedAt": "2025-01-12T16:12:30.747+00:00"
+      }
+    ]
+  },
+  "sessions": {
+    "id": "6781629000147423f32a",
+    "name": "sessions",
+    "attributes": [
+      {
+        "key": "specialistId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:10:50.239+00:00",
+        "$updatedAt": "2025-01-10T18:10:50.384+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "userId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:11:15.021+00:00",
+        "$updatedAt": "2025-01-10T18:11:15.274+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:11:44.328+00:00",
+        "$updatedAt": "2025-01-14T04:46:09.793+00:00",
+        "elements": [
+          "waiting",
+          "pending",
+          "finished"
+        ],
+        "format": "enum",
+        "default": "waiting"
+      },
+      {
+        "key": "lastMessage",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:11:54.089+00:00",
+        "$updatedAt": "2025-01-10T18:11:54.214+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "lastMessageTime",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:12:13.321+00:00",
+        "$updatedAt": "2025-01-10T18:12:13.465+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "unreadCount",
+        "type": "integer",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:12:27.285+00:00",
+        "$updatedAt": "2025-01-10T18:12:27.447+00:00",
+        "min": -9223372036854776000,
+        "max": 9223372036854776000,
+        "default": null
+      },
+      {
+        "key": "createdAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:12:33.881+00:00",
+        "$updatedAt": "2025-01-10T18:12:34.038+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "updatedAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T18:12:40.428+00:00",
+        "$updatedAt": "2025-01-10T18:12:40.624+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "lastMessageType",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T04:50:43.504+00:00",
+        "$updatedAt": "2025-01-14T04:50:43.728+00:00",
+        "elements": [
+          "text",
+          "voice",
+          "image"
+        ],
+        "format": "enum",
+        "default": null
+      },
+      {
+        "key": "lastMessageContent",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-14T04:51:35.515+00:00",
+        "$updatedAt": "2025-01-14T04:51:35.684+00:00",
+        "size": 1024,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "status_specialist",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "status",
+          "specialistId",
+          "lastMessageTime"
+        ],
+        "orders": [
+          "ASC",
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-14T04:52:42.083+00:00",
+        "$updatedAt": "2025-01-14T04:52:42.283+00:00"
+      },
+      {
+        "key": "user_sessions",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "userId",
+          "lastMessageTime"
+        ],
+        "orders": [
+          "ASC",
+          "DESC"
+        ],
+        "$createdAt": "2025-01-14T05:09:31.150+00:00",
+        "$updatedAt": "2025-01-14T05:09:31.372+00:00"
+      }
+    ]
+  },
+  "users": {
+    "id": "67815697001070a2e926",
+    "name": "users",
+    "attributes": [
+      {
+        "key": "email",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-10T17:26:30.212+00:00",
+        "$updatedAt": "2025-01-10T17:26:30.362+00:00",
+        "format": "email",
+        "default": null
+      },
+      {
+        "key": "role",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:28:49.231+00:00",
+        "$updatedAt": "2025-01-10T17:28:49.368+00:00",
+        "elements": [
+          "admin",
+          "specialist",
+          "manager",
+          "user"
+        ],
+        "format": "enum",
+        "default": "user"
+      },
+      {
+        "key": "phone",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:29:24.935+00:00",
+        "$updatedAt": "2025-01-10T17:50:19.813+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "photoUrl",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:29:44.972+00:00",
+        "$updatedAt": "2025-01-10T17:29:45.217+00:00",
+        "format": "url",
+        "default": null
+      },
+      {
+        "key": "isActive",
+        "type": "boolean",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:30:46.874+00:00",
+        "$updatedAt": "2025-01-10T17:50:37.040+00:00",
+        "default": true
+      },
+      {
+        "key": "lastLogin",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:30:57.665+00:00",
+        "$updatedAt": "2025-01-10T17:30:57.818+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "createdBy",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:31:22.594+00:00",
+        "$updatedAt": "2025-01-13T00:16:31.924+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "invitedBy",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:31:36.112+00:00",
+        "$updatedAt": "2025-01-10T17:50:52.169+00:00",
+        "size": 30,
+        "default": null
+      },
+      {
+        "key": "updatedAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:32:09.982+00:00",
+        "$updatedAt": "2025-01-10T17:32:10.166+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "name",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-10T17:49:49.115+00:00",
+        "$updatedAt": "2025-01-10T17:49:49.254+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-13T00:18:48.655+00:00",
+        "$updatedAt": "2025-01-13T00:18:49.468+00:00",
+        "elements": [
+          "active",
+          "inactive"
+        ],
+        "format": "enum",
+        "default": "active"
+      },
+      {
+        "key": "password",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-13T00:19:19.116+00:00",
+        "$updatedAt": "2025-01-13T00:19:19.897+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "permissions",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": true,
+        "$createdAt": "2025-01-13T00:23:31.437+00:00",
+        "$updatedAt": "2025-01-13T00:23:32.133+00:00",
+        "size": 255,
+        "default": null
+      },
+      {
+        "key": "createdAt",
+        "type": "datetime",
+        "status": "available",
+        "error": "",
+        "required": true,
+        "array": false,
+        "$createdAt": "2025-01-13T00:34:30.719+00:00",
+        "$updatedAt": "2025-01-13T00:34:31.632+00:00",
+        "format": "",
+        "default": null
+      },
+      {
+        "key": "userId",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-13T02:26:25.890+00:00",
+        "$updatedAt": "2025-01-13T02:26:26.667+00:00",
+        "size": 32,
+        "default": null
+      },
+      {
+        "key": "username",
+        "type": "string",
+        "status": "available",
+        "error": "",
+        "required": false,
+        "array": false,
+        "$createdAt": "2025-01-17T19:49:58.720+00:00",
+        "$updatedAt": "2025-01-17T19:49:59.783+00:00",
+        "size": 30,
+        "default": null
+      }
+    ],
+    "indexes": [
+      {
+        "key": "email_index",
+        "type": "unique",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "email"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-10T17:51:26.761+00:00",
+        "$updatedAt": "2025-01-10T17:51:26.933+00:00"
+      },
+      {
+        "key": "role_status_index",
+        "type": "key",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "role",
+          "isActive"
+        ],
+        "orders": [
+          "ASC",
+          "ASC"
+        ],
+        "$createdAt": "2025-01-10T17:52:21.754+00:00",
+        "$updatedAt": "2025-01-10T17:52:21.914+00:00"
+      },
+      {
+        "key": "name_search_index",
+        "type": "fulltext",
+        "status": "available",
+        "error": "",
+        "attributes": [
+          "name"
+        ],
+        "orders": [
+          "ASC"
+        ],
+        "$createdAt": "2025-01-10T17:52:57.552+00:00",
+        "$updatedAt": "2025-01-10T17:52:58.138+00:00"
+      }
+    ]
+  }
+}
